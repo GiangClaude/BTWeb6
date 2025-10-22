@@ -27,25 +27,6 @@ function OnSearch() {
 }
 
 
-// --- Helpers để lưu/đọc localStorage ---
-function loadProductsFromStorage() {
-  try {
-    const raw = localStorage.getItem('products');
-    return raw ? JSON.parse(raw) : [];
-  } catch (err) {
-    console.error('Error parsing products from localStorage', err);
-    return [];
-  }
-}
-
-function saveProducts(products) {
-  try {
-    localStorage.setItem('products', JSON.stringify(products));
-  } catch (err) {
-    console.error('Error saving products to localStorage', err);
-  }
-}
-
 
 searchBtn.addEventListener('click', () => {
     OnSearch();
