@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Flower Shop</title>
+</head>
+<body>
+    <div id="modal-overlay"></div>
+    <!-- Header -->
+    <header>
+        <h1>Flower Shop</h1>
+        <nav>
+            <!-- Danh sach dieu huong -->
+             <!-- Để điều hướng nhưng chưa có link nên để tạm # -->
+            <a href="#">Home</a> 
+            <a href="#">Products</a> 
+            <a href="#">About Us</a> 
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section class="introduce">
+            <h2>Welcome to Our Flower Shop</h2>
+            <p>We offer a wide variety of fresh flowers and arrangements for all occasions.</p>
+            <div class="product-find">
+                <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm..."> 
+                <button id="searchBtn">Tìm</button>
+            </div>
+            <button id="addProductBtn">Thêm sản phẩm</button>
+        </section>
+        <section class="product-list">
+            <article class="product-item">
+                <img src="../image/images-31.jpg" alt="Hoa hồng">
+                <h3 class = "product-name">Rose</h3>
+                <p>A beautiful red rose, perfect for expressing love and affection.</p>
+                <p class="price">$19.99</p>
+                <button>Add to Cart</button>
+            </article>
+            <article class="product-item">
+                <img src="../image/35842_Y-nghia-hoa-huong-duong.jpg" alt="Hoa hướng dương">
+                <h3 class = "product-name">Sun Flowers</h3>
+                <p>A vibrant bouquet of sunflowers to brighten up any room.</p>
+                <p class="price">$15.99</p>
+                <button>Add to Cart</button>
+            </article>
+            <article class="product-item">
+                <img src="../image/chau_lan_ho_diep_khai_truong_234a49821ac34205a6c347ed045549f3_1024x1024.jpg" alt="Hoa lan">
+                <h3 class = "product-name">Orchid</h3>
+                <p>An elegant orchid, symbolizing beauty and strength.</p>
+                <p class="price">$29.99</p>
+                <button>Add to Cart</button>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <h3>Contact Us Now!</h3>
+        <form action="">
+            <div class="form-row">
+                <div class="field">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div class="field">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+            </div>
+            <div class="field">
+                <label for="message">Message:</label>
+                <input type="text" id="message" name="message">
+            </div>
+            <button type="submit">Send</button>
+        </form>
+        <p>&copy; 2024 Flower Shop. All rights reserved.</p>
+    </footer>
+
+    <form action="" id = "addProductForm" class = "hidden">
+        <h3>Add New Product</h3>
+        <div class="form-row">
+            <div class="field">
+                <label for="name">Name:</label>
+                <input type="text" id = "newName" name="name" required>
+            </div>
+            <div class="field">
+                <label for="price">Price:</label>
+                <input type="text" id = "newPrice" class="price" name="price" required>
+            </div>
+        </div>
+        <div class="field">
+            <label for="newDesc">Description:</label>
+            <textarea id="newDesc" rows="3"></textarea> 
+        </div>
+        <div class="sub-btn">
+            <button type="submit">Send</button>
+            <button type="button" class="closeFormBtn">Cancel</button>
+        </div>
+        <p id="errorMsg" style="color:red;"></p> <!-- Thông báo lỗi --> 
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
